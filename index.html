@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocina Oculta Delicias de la Negra - Comida Casera</title>
+    <meta name="description" content="Cocina Oculta Delicias de la Negra. Comida casera deliciosa, preparada con amor y directo hasta tu puerta. Pedidos por WhatsApp, domicilios y promociones.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar fixed top-0 left-0 right-0 z-[1000] px-4 py-3 lg:py-4" id="navbar">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="#inicio" class="text-white font-extrabold text-lg lg:text-xl tracking-tight nav-brand" id="brandLink">
+                <span class="text-yellow-400">DELICIAS</span> DE LA NEGRA
+            </a>
+            <nav class="hidden md:flex items-center gap-8" id="desktopNav">
+                <ul class="flex gap-8 list-none" id="nav-list"></ul>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button class="relative bg-none border-none text-white text-xl cursor-pointer p-1.5" id="cartToggle" aria-label="Abrir carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="md:hidden bg-none border-none text-white text-2xl cursor-pointer p-1" id="menuToggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="list-none text-center flex flex-col gap-6" id="mobileNavList"></ul>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🍽️ Cocina Oculta</div>
+            <h1 class="hero-title">
+                Delicias <span>de la Negra</span>
+            </h1>
+            <p class="hero-sub">Comida deliciosa, preparada con amor y directo hasta tu puerta.</p>
+            <p class="hero-text">Haz tu pedido y disfruta nuestras delicias desde la comodidad de tu casa.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-yellow" id="heroOrderBtn">
+                    <i class="fas fa-shopping-cart"></i> PEDIR AHORA
+                </a>
+                <a href="https://wa.me/573113378336" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <i class="fab fa-whatsapp"></i> PEDIR POR WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROMOCIONES ========== -->
+    <section id="promociones" class="section">
+        <div class="text-center mb-10">
+            <span class="section-label">🔥 No te lo pierdas</span>
+            <h2 class="section-title">PROMOCIONES DE LA SEMANA</h2>
+            <p class="section-sub mx-auto">Aprovecha nuestras ofertas especiales y disfruta aún más.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8" id="promoContainer">
+            <!-- Promo 1 -->
+            <div class="promo-card fade-up">
+                <span class="promo-badge">🟡 Viernes</span>
+                <h3 class="promo-title">¡VIERNES DE COMIDA GRATIS!</h3>
+                <p class="promo-text">Si realizaste compras de lunes a jueves, puedes recibir comida gratis el viernes. Realiza tu pedido con un día de anticipación o escríbenos para consultar qué comida tendremos disponible.</p>
+                <a href="https://wa.me/573113378336?text=%C2%A1Quiero%20consultar%20la%20promoci%C3%B3n%20de%20VIERNES%20DE%20COMIDA%20GRATIS!" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-sm">
+                    <i class="fas fa-phone-alt"></i> CONSULTAR PROMOCIÓN
+                </a>
+                <p class="promo-footnote">* Promoción sujeta a disponibilidad y condiciones del negocio.</p>
+            </div>
+            <!-- Promo 2 -->
+            <div class="promo-card fade-up">
+                <span class="promo-badge">🥤 Bebida</span>
+                <h3 class="promo-title">¡SODA GRATIS!</h3>
+                <p class="promo-text">Acompaña tu pedido con una soda GRATIS. Válido para cualquier plato de nuestro menú.</p>
+                <div class="promo-free">GRATIS</div>
+                <p class="promo-footnote">* Válido mientras duren existencias. No acumulable con otras promociones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MENÚ ========== -->
+    <section id="menu" class="section bg-white rounded-t-3xl -mt-2 pt-16">
+        <div class="text-center mb-10">
+            <span class="section-label">🍴 Nuestros platos</span>
+            <h2 class="section-title">MENÚ DEL DÍA</h2>
+            <p class="section-sub mx-auto">Selecciona tu plato favorito y agrégalo a tu pedido.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="menuGrid"></div>
+    </section>
+
+    <!-- ========== ¿POR QUÉ ELEGIRNOS? ========== -->
+    <section class="section bg-gray-50 -mt-2 rounded-b-3xl pb-16">
+        <div class="text-center mb-10">
+            <span class="section-label">⭐ Nosotros</span>
+            <h2 class="section-title">¿POR QUÉ ELEGIRNOS?</h2>
+            <p class="section-sub mx-auto">Razones para disfrutar de nuestras delicias.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="whyGrid"></div>
+    </section>
+
+    <!-- ========== DOMICILIOS ========== -->
+    <section id="domicilios" class="section text-center">
+        <div class="max-w-2xl mx-auto">
+            <span class="section-label">🛵 Llegamos a ti</span>
+            <h2 class="section-title">¡PEDIMOS Y TE LO LLEVAMOS!</h2>
+            <p class="section-sub mx-auto">No salgas de casa. Nosotros llevamos tus Delicias de la Negra hasta donde estés.</p>
+            <a href="https://wa.me/573113378336?text=%C2%A1Quiero%20pedir%20domicilio%20de%20Delicias%20de%20la%20Negra!" target="_blank" rel="noopener noreferrer" class="btn btn-yellow mt-4">
+                <i class="fas fa-motorcycle"></i> PEDIR DOMICILIO
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== BANNER ========== -->
+    <div class="banner">
+        <div class="banner-content">
+            <h3 class="banner-title">🔥 ¡NO TE PIERDAS LAS PROMOCIONES!</h3>
+            <p class="banner-text">Compra de lunes a jueves y pregunta por nuestra promoción del viernes.</p>
+            <p class="banner-phone"><i class="fab fa-whatsapp mr-2"></i> +57 311 3378336</p>
+        </div>
+    </div>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="section text-center">
+        <div class="max-w-2xl mx-auto">
+            <span class="section-label">📲 Contáctanos</span>
+            <h2 class="section-title">¿TIENES ALGUNA PREGUNTA?</h2>
+            <p class="section-sub mx-auto">¿Quieres saber qué comida tenemos disponible? ¿Quieres reservar tu pedido? ¿Necesitas información sobre nuestros domicilios?</p>
+            <p class="text-2xl font-bold text-black mb-6">📞 +57 311 3378336</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="tel:+573113378336" class="btn btn-yellow">
+                    <i class="fas fa-phone-alt"></i> LLAMAR AHORA
+                </a>
+                <a href="https://wa.me/573113378336" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+                    <i class="fab fa-whatsapp"></i> WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="max-w-4xl mx-auto">
+            <div class="footer-brand"><span>DELICIAS</span> DE LA NEGRA</div>
+            <p class="footer-text">Comida casera, buen precio, promociones y domicilios fáciles.</p>
+            <p class="footer-text text-sm">🍽️ Cocina Oculta</p>
+            <hr class="footer-divider">
+            <p class="footer-copy">&copy; 2025 Delicias de la Negra. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING WHATSAPP ========== -->
+    <a href="https://wa.me/573113378336" target="_blank" rel="noopener noreferrer" class="float-wa" id="floatWA" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">¡Escríbenos!</span>
+    </a>
+
+    <!-- ========== CART OVERLAY & PANEL ========== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag mr-2"></i> Tu Pedido</h3>
+            <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Tu carrito está vacío</p>
+                <p class="text-sm mt-1">Agrega productos del menú para empezar.</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-totals" id="cartTotals">
+                <div class="cart-total-row"><span>Subtotal</span><span id="subtotal">$0</span></div>
+                <div class="cart-total-row total"><span>Total</span><span id="total">$0</span></div>
+            </div>
+            <button class="btn btn-yellow" id="checkoutBtn" disabled>
+                <i class="fas fa-credit-card"></i> FINALIZAR PEDIDO
+            </button>
+            <button class="btn btn-dark btn-sm mt-2 w-full" id="clearCartBtn">
+                <i class="fas fa-trash-alt"></i> VACIAR CARRITO
+            </button>
+            <!-- Checkout form -->
+            <div class="checkout-form" id="checkoutForm">
+                <p class="text-sm font-semibold text-gray-700 mb-3">📋 Datos del pedido</p>
+                <div class="form-group" id="fg-name">
+                    <label for="ord-name">Nombre completo *</label>
+                    <input type="text" id="ord-name" placeholder="Tu nombre" autocomplete="name" maxlength="80">
+                    <div class="error">Por favor ingresa tu nombre.</div>
+                </div>
+                <div class="form-group" id="fg-whatsapp">
+                    <label for="ord-whatsapp">WhatsApp *</label>
+                    <input type="tel" id="ord-whatsapp" placeholder="Ej: 3113378336" autocomplete="tel" maxlength="20">
+                    <div class="error">Por favor ingresa un número válido.</div>
+                </div>
+                <div class="form-group" id="fg-address">
+                    <label for="ord-address">Dirección *</label>
+                    <input type="text" id="ord-address" placeholder="Calle, carrera, número" autocomplete="street-address" maxlength="120">
+                    <div class="error">Por favor ingresa tu dirección.</div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="form-group" id="fg-neighborhood">
+                        <label for="ord-neighborhood">Barrio *</label>
+                        <input type="text" id="ord-neighborhood" placeholder="Barrio" maxlength="60">
+                        <div class="error">Campo requerido.</div>
+                    </div>
+                    <div class="form-group" id="fg-reference">
+                        <label for="ord-reference">Referencia</label>
+                        <input type="text" id="ord-reference" placeholder="Casa, apto, etc." maxlength="60">
+                    </div>
+                </div>
+                <div class="form-group" id="fg-payment">
+                    <label for="ord-payment">Método de pago *</label>
+                    <select id="ord-payment">
+                        <option value="">Selecciona...</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Nequi">Nequi</option>
+                        <option value="Daviplata">Daviplata</option>
+                        <option value="Bancolombia">Bancolombia</option>
+                        <option value="Transferencia">Transferencia</option>
+                    </select>
+                    <div class="error">Selecciona un método de pago.</div>
+                </div>
+                <div class="form-group">
+                    <label for="ord-notes">Observaciones</label>
+                    <textarea id="ord-notes" placeholder="Alguna indicación especial..." maxlength="300"></textarea>
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <button class="btn btn-yellow flex-1" id="sendOrderBtn">
+                        <i class="fab fa-whatsapp"></i> ENVIAR PEDIDO
+                    </button>
+                    <button class="btn btn-dark" id="cancelOrderBtn">CANCELAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TOAST CONTAINER ========== -->
+    <div class="toast-container" id="toastContainer"></div>
+s
+    <!-- ========== SCRIPTS ========== -->
+   
+    <script src="main.js"></script>
+
+</body>
+</html>
